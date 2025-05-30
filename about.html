@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Conseils Santé</title>
+    <link rel="stylesheet" href="style 1.css">
+</head>
+
+<body>
+    
+        <header class="header-banner">
+            <h1>À propos</h1>
+            <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="logout()">Déconnexion</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <!-- Barre de navigation -->
+        
+
+        <section id="about" class="section">
+            <h2>À propos</h2>
+            <p>Notre mission est d'aider chacun à améliorer sa santé grâce à des conseils simples et efficaces.</p>
+        </section>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>&copy; Tous droits réservés 2025</p>
+        </footer>
+    </div>
+
+    <!-- Script pour la déconnexion -->
+    <script>
+        function logout() {
+            localStorage.removeItem("isLoggedIn");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

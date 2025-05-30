@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #e6e6e6d8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #4d0d81;
+    color: white;
+ }
+/* === Navigation === */
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 3px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* === Sections === */
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #83219b;
+}
+
+/* === Grille et Cartes === */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    color: #540a80;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* === Boutons et liens === */
+a {
+    text-decoration: none;
+    color: #5e0e7e;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    color: #440a66;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #510d7e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4d0d81;
+}
+
+/* === Pied de page === */
+footer {
+    background: linear-gradient(to left, #4a0258, #030e11);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 250px;
+}
+
+/* === Responsive : Petits écrans (moins de 600px) === */
+@media (max-width: 600px) {
+    .header-banner img {
+        max-height: 100px;
+    }
+
+    .header-banner .overlay {
+        padding: 10px;
+    }
+
+    /* Correction pour garder le menu horizontal */
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        overflow-x: auto; /* Active le scroll horizontal si besoin */
+        white-space: nowrap; /* Évite la coupure des mots */
+        justify-content: flex-start;
+        padding: 5px 10px;
+    }
+
+    nav ul li {
+        flex-shrink: 0; /* Empêche les éléments de se réduire trop */
+        margin: 0 3px; /* Réduit l'espace entre les éléments */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Réduit la taille du texte */
+        padding: 5px 8px; /* Ajuste la taille du bouton */
+    }
+
+    /* Correction des images des cartes */
+    .card img {
+        width: 100%;
+        max-height: 120px; /* Hauteur réduite pour mobile */
+        object-fit: cover;
+    }
+
+    /* Ajustement des cartes sur mobile */
+    .card {
+        width: 100%; /* Les cartes occupent toute la largeur */
+        padding: 15px; /* Ajuste le padding pour une meilleure lisibilité */
+    }
+
+    button {
+        font-size: 16px; /* Réduit la taille du texte pour mobile */
+        padding: 10px 15px; /* Ajuste le padding du bouton */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Réduit la taille du texte dans le pied de page */
+    }
+}
